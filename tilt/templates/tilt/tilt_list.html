@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tilt Readings{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div id='root'></div>
+    <script src="{% static 'main.bundle.js' %}"></script>
+{% endblock content %}

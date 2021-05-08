@@ -1,0 +1,20 @@
+# vs code things to ignore
+.vscode/
+
+# js things to ignore
+node_modules
+.eslintrc.json
+
+# environment files to ignore
+*.env
+
+# Jupyter notebook for db exploring
+shell.ipynb
+
+# Python/Django things to ignore
+migrations/
+db.sqlite3
+__pycache__/
+
+# setup files for serving
+config.d/

@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+channels = "*"
+requests = "*"
+aioblescan = "*"
+djangorestframework = "*"
+ipython = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.7"
