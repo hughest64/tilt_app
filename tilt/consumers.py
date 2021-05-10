@@ -4,15 +4,8 @@ Channels consumers for passing along Tilt data.
 """
 from datetime import datetime
 import json
-from os import read
-from asgiref.sync import sync_to_async
-from django.core.cache import cache
-from channels.db import database_sync_to_async
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from channels.generic.http import AsyncHttpConsumer
-from rest_framework import serializers
-from tilt.models import Fermentation, Tilt
-from tilt.serializers import TiltSerializer, TiltReadingSerializer
 from tilt.utils import utils
 
 

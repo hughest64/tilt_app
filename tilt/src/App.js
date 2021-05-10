@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { SocketContext, useSocket, } from './utils/socket';
 import { getUpdatedTiltArray } from './reducers/tiltStatusReducer';
-// import { tiltData } from './utils/tempData';
 import { NavBar } from './components/NavBar';
 import { TiltCard } from './components/TiltCard';
 import { tiltStatusReducer } from './reducers/tiltStatusReducer';
