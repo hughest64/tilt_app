@@ -94,7 +94,7 @@ class Command(BaseCommand):
         user = User.objects.get(id=kwargs["user_id"])
 
         try:
-            [Tilt.objects.create(user=User, **tilt) for tilt in TILTS]
+            [Tilt.objects.create(user=user, **tilt) for tilt in TILTS]
             self.stdout.write(
                 self.style.SUCCESS(f"succesfully created tilts for {user.username}")
             )
