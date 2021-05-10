@@ -21,6 +21,7 @@ def set_tilt_active_state(data):
     tilt.save()
 
 
+# TODO: this will need to take a user_id param, and filter to a specific user
 @database_sync_to_async
 def get_tilt_data():
     tilts = Tilt.objects.all()

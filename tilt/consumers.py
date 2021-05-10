@@ -15,6 +15,7 @@ class TiltSocketConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         # accept the connection
         await self.accept()
+        # TODO: this will need to pass a user_id from the scope
         # send the current tilt data be default
         data = await utils.get_tilt_data()
         await self.send_json({"type": "tiltPayload", "message": data})
