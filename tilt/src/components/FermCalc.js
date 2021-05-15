@@ -148,8 +148,8 @@ function FermCalc() {
                     <small>*Apparent Attenuation</small>
                     <br />
                     <small>
-                        **The current brix reading is corrected for alcohol content
-                         and is only valid when an original brix value is present.
+                        **The current specific gravity value is corrected for alcohol content when
+                         calculated from brix and is only valid if there is an original brix reading. 
                     </small>
                 </Card.Content>
             </Card>
