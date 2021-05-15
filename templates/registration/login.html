@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block messages %}
+{% if form.errors %}
+<div class="alert alert-danger mt-n3" role="alert">
+    <h5>Your username and password didn't match. Please try again.</h5>
+</div>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+<div class="alert alert-danger mt-n3" role="alert">
+    <h5>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</h5>
+</div>
+
+{% else %}
+<div class="alert alert-warning mt-n3" role="alert">
+    <h5>Please login to see this page.</h5>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center text-center">
+    <form method="post" action="{% url 'login' %}">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        {% csrf_token %}
+        <input class="form-control mb-3" type="text" placeholder="User name" name="username">
+        <input class="form-control mb-3" type="password" placeholder="Password" name="password">
+        <input class="btn tardis text-white" type="submit" value="Login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+</div>
+{# Assumes you setup the password_reset view in your URLconf #}
+<!-- <p><a href="{% url 'password_reset' %}">Lost password?</a></p> -->
+{% endblock %}
